@@ -51,7 +51,7 @@ object Trainer {
    /** CHARGER LE DATASET **/
 
 	// On charge le fivhier prepare
-	val filteredDF = spark.read.parquet("/cal/homes/arastel/my_TP_Spark/data/prepared_trainingset")
+	val filteredDF = spark.read.parquet("../../../../../data/prepared_trainingset")
 	
 	filteredDF.createOrReplaceTempView("parquetFile")
 	/**val namesDF = spark.sql("SELECT * FROM parquetFile LIMIT 2")
